@@ -1,0 +1,19 @@
+.header {
+    height: 70px;
+    background-color: rgb(37, 35, 35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+.link {
+    color: rgb(126, 126, 196);
+    text-decoration: none;
+    cursor: pointer;
+}

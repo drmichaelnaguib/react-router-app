@@ -1,9 +1,23 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ContactUsPage from "./pages/ContactUsPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import RootLayout from "./components/layout/RootLayout";
+
+const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/contact-us", element: <ContactUsPage /> },
+      { path: "/about-us", element: <AboutUsPage /> },
+    ],
+  },
+]);
+
 function App() {
-  return (
-    <div>
-      app component
-    </div>
-  );
+  return <RouterProvider router={routes} />;
 }
 
 export default App;
